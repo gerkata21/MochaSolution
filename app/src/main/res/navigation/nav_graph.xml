@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/alertListFragment">
+
+    <fragment
+        android:id="@+id/alertListFragment"
+        android:name="com.android.interviewtask.ui.alertlist.AlertListFragment"
+        android:label="CardsList"
+        tools:layout="@layout/fragment_alert_list">
+
+        <action
+            android:id="@+id/action_interviewtaskListFragment_to_interviewtaskDetailFragment"
+            app:destination="@id/alertDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/alertDetailFragment"
+        android:name="com.android.interviewtask.ui.alertdetails.AlertDetailsFragment"
+        android:label="CardDetails"
+        tools:layout="@layout/fragment_alert_details" />
+
+</navigation>
