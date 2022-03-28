@@ -18,11 +18,12 @@ This repository contains an android app for interview purpose. It implements MVV
 6. **ui**: UI classes along with their corresponding ViewModel.
 "# MochaSolution" 
 
+Solution 1
+
 override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         val txt_sample=findViewById<TextView>(R.id.txt_sample)
-        txt_sample.setText(updateString("@My Very First Commit@ \$by AdiR\$ #s. f.# (#Med.#) This fixes most important bugs #2020-10-10# @Weather App@"),TextView.BufferType.SPANNABLE)
     }
 
     fun updateString(inputString:String):SpannableStringBuilder {
