@@ -234,34 +234,17 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/alert_instructions_title" />
 
-            <TextView
-                android:id="@+id/alert_areacodes_title"
+            <Button
+                android:id="@+id/btn_affected"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:text="Affected Zones"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="14dp"
-                android:typeface="sans"
+                android:textAllCaps="false"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/alert_instructions" />
-
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chipsPrograms"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                app:chipSpacing="8dp"
-                android:visibility="gone"
-                app:singleSelection="false"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/alert_areacodes_title">
-
-            </com.google.android.material.chip.ChipGroup>
-
 
 
 

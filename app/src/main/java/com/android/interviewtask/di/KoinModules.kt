@@ -3,6 +3,7 @@ package com.android.interviewtask.di
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.android.interviewtask.rest.*
+import com.android.interviewtask.ui.affectedzones.AffectedZonesViewModel
 import com.android.interviewtask.ui.alertlist.AlertListViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -14,8 +15,11 @@ import java.util.concurrent.TimeUnit
 
 val networkModule = module {
 
-    // provides the cards repository implementation
+    // provides the weather repository implementation
     fun provideWeatherRepo(weatherApi: WeatherApi): WeatherRepository = WeatherRepositoryImpl(weatherApi)
+
+    // provides the affectedZones repository implementation
+    fun provideAffectedZones(weatherApi: WeatherApi): AffectedZonesRepository = AffectedZonesRepositoryImpl(weatherApi)
 
     // provide Gson object
     fun provideGson() = GsonBuilder().create()
@@ -49,10 +53,14 @@ val networkModule = module {
     single { provideOkHttpClient(get()) }
     single { provideWeatherApi(get(), get()) }
     single { provideWeatherRepo(get()) }
+    single { provideAffectedZones(get()) }
 }
 
 val viewModelModule = module {
     viewModel {
         AlertListViewModel(get())
+    }
+    viewModel {
+        AffectedZonesViewModel(get())
     }
 }

@@ -8,18 +8,31 @@
     <fragment
         android:id="@+id/alertListFragment"
         android:name="com.android.interviewtask.ui.alertlist.AlertListFragment"
-        android:label="CardsList"
+        android:label="AlertList"
         tools:layout="@layout/fragment_alert_list">
 
         <action
             android:id="@+id/action_interviewtaskListFragment_to_interviewtaskDetailFragment"
             app:destination="@id/alertDetailFragment" />
+        <action
+            android:id="@+id/action_interviewtaskListFragment_to_interviewtaskDetailFragment2"
+            app:destination="@id/affectedZonesFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/alertDetailFragment"
         android:name="com.android.interviewtask.ui.alertdetails.AlertDetailsFragment"
-        android:label="CardDetails"
-        tools:layout="@layout/fragment_alert_details" />
+        android:label="AlertDetails"
+        tools:layout="@layout/fragment_alert_details" >
+        <action
+            android:id="@+id/action_interviewtaskDetailFragment_to_interviewtaskAffectedZonesFragment"
+            app:destination="@id/affectedZonesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/affectedZonesFragment"
+        android:name="com.android.interviewtask.ui.affectedzones.AffectedZonesFragment"
+        android:label="AffectedZones"
+        tools:layout="@layout/affected_zones_fragment" />
 
 </navigation>
